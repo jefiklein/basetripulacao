@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula HTML Tripulação &copy;</title>
+    <link rel="icon" type="image/x-icon" href="/imgs/HatIcon.png" />
+
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: "montserrat";
+            src: url("fonts/montserrat.woff2");
+        }
+
+        @font-face {
+            font-family: "roboto";
+            src: url("fonts/roboto.woff2");
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(104, 104, 104);
+            background-position: center;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            font-family: "roboto";
+        }
+
+        a {
+            text-decoration: none;
+            color: unset;
+        }
+    </style>
+
+    <div class="principal">
+        <style>
+            body .principal {
+                display: flex;
+                flex-direction: column;
+                gap: 3.5vw;
+                font-size: 5vw;
+                padding: 5vw;
+            }
+
+            body .principal .headline {
+                font-family: "montserrat";
+            }
+
+            body .principal .headline .info {
+                color: rgb(27, 183, 37);
+                font-size: 6vw;
+            }
+
+            body .principal #vsl {
+                box-shadow: 0 0 19px 6px rgb(131, 83, 16);
+                margin-block: 2vw;
+                border-radius: 3vw;
+                overflow: hidden;
+            }
+
+            body .principal #vsl iframe {
+                display: flex;
+                width: 100%;
+                aspect-ratio: 16/9;
+                border: unset;
+            }
+
+            body .principal .cta {
+                box-shadow: 0 0 8vw 2vw rgb(92, 196, 43);
+                background-image: linear-gradient(90deg, rgb(74, 112, 73), rgb(8, 192, 39));
+                border-radius: 3vw;
+                margin: auto;
+                padding: 4vw;
+                margin-top: 4vw;
+                font-family: "montserrat";
+                font-size: 4vw;
+                text-transform: uppercase;
+                animation: zoom 1.5s ease infinite;
+            }
+
+            @keyframes zoom {
+                0%, 100% {
+                    transform: scale(1,1);
+                }
+                50% {
+                    transform: scale(1.14,1.14);
+                }
+            }
+
+            body .principal .hat img {
+                width: 50%;
+            }
+
+            @media (min-aspect-ratio: 1/1)
+            {
+                body .principal .headline {
+                    font-size: 3vw;
+                }
+            }
+
+
+        </style>
+        <!-- id="RG" #  class="Grupo" . -->
+
+        <div class="headline">
+            O suco que me emagreceu <span class="info">30KG</span> em <span class="info">duas semanas</span>
+        </div>
+        <div class="volume">
+            🔊 Verifique se o seu áudio está ligado!
+        </div>
+        <div id="vsl">
+            <iframe src="https://www.youtube.com/embed/sVVvOKNYAVA" allowfullscreen></iframe>
+        </div>
+        <div class="subHeadline">
+            🥦 Assista ao vídeo acima até o final para a receita do suco! 🥦
+        </div>
+        <a class="cta delay">
+            Quero o suco Detox!
+        </a>
+        <div class="hat">
+            <img src="/imgs_d/fruta.png">
+        </div>
+    </div>
+
+    <div class="footer">
+        <style>
+            body .footer {
+                background-color: rgb(50, 126, 17);
+                padding: 3vw;
+                font-size: 3vw;
+                text-transform: uppercase;
+                line-height: 2;
+            }
+        </style>
+        <div class="disclaimer">
+            <div>Todos os direitos reservados &copy; 2023</div>
+            <div>Este site não faz parte nem é endossado pelo Facebook</div>
+            <div>Facebook é uma marca comercial da Meta Platforms, Inc.</div>
+            Este site não pertence ao Facebook
+        </div>
+        <div class="terms">
+            <a href="tc">Termos de Uso</a>
+            |
+            <a href="pp">Política de Privacidade</a>
+        </div>
+    </div>
+
+    <script>
+        // Script de Delay
+        const min = 0; // Minutos
+        const sec = 5; // Segundos
+  
+        setTimeout(
+          () =>
+            document
+              .querySelectorAll(".delay") // Todos os blocos com class "delay" cairá no delay
+              .forEach((x) => x.classList.remove("delay")),
+          (min * 60 + sec) * 1000
+        );
+      </script>
+      <style>
+        .delay {
+          display: none !important; /* Forçando a área de Delay para não ser mostrada */
+        }
+      </style>
+</body>
+
+</html>
